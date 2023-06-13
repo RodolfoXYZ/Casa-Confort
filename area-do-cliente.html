@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Casa Confort</title>
+  <style>
+      .maisPopularText{
+        background-color: black;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+      }
+  </style>
+</head>
+<body>
+  <div class="intro">
+    <div class="section">
+      <div class="intro-titulo">
+        <h1>Casa Confort</h1>
+        <p>Casas & Apartamentos</p>
+      </div>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="section">
+      <ul>
+        <li class="teste"><a href="index.html">Página Inicial</a></li>
+        <li><a href="area-do-cliente.html">Área do Cliente</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="maisPopular" class="maisPopular">
+    <div class="section">
+      <div class="main-img">
+        <img src="img/confortable.jpg" alt="sala de estar">
+      </div>
+      <div class="maisPopularText">
+        <p>Área do Cliente</p>
+      </div>
+    </div>
+  </div>
+  <hr class="section">
+  <div id="perfil" class="section">
+    <img src="img/perfil.jpg" alt="Foto do Cliente">
+    <p><strong>Nome:</strong> Killua Zoldyck</p>
+    <p><strong>Idade:</strong> 14 anos</p>
+    <p><strong>Endereço:</strong> Montanha Kukuru</p>
+    <p><strong>Ocupação:</strong> Caçador Profissional</p>
+    <p><strong>Telefone:</strong> (81) 98326-2735</p>
+    <p><strong>E-mail:</strong> contato.killuazoldyck@gmail.com</p>
+  </div>
+  <div id="alterar" class="section">
+    <h2>Alterar Dados</h2>
+    <p>Caso seja do seu desejo realizar alterações em seu cadastro, estaremos disponibilizando abaixo os campos disponíveis para alteração:</p>
+    <div id="dados" class="section">
+        <form>
+          <label for="telefone">Telefone:</label>
+          <input type="text" id="telefone" name="telefone" required>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="senha">Senha:</label>
+          <input type="senha" id="senha" name="senha" required>
+          <button type="submit">Enviar</button>
+        </form>
+    </div>
+  </div>
+  <div id="footer" class="footer">
+    <div class="section">
+      <div>
+        <h2>Casa Confort</h2>
+        <p>Copyright @ 2023</p>
+        <div class="linha"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const perfilImg = document.querySelector("#perfil img");
+
+    perfilImg.addEventListener("mouseover", function() {
+      perfilImg.style.transform = "scale(1.2)";
+      perfilImg.style.transition = "transform 0.3s";
+      perfilImg.style.margin = "0 auto";
+    });
+
+    perfilImg.addEventListener("mouseout", function() {
+      perfilImg.style.transform = "scale(1)";
+      perfilImg.style.transition = "transform 0.3s";
+    });
+
+    const enviarBtn = document.querySelector("#dados button");
+
+    enviarBtn.addEventListener("click", function(event) {
+      event.preventDefault(); // Evita o envio do formulário
+
+      // Realiza a alteração dos dados (simulação)
+      // Você pode adicionar o código de alteração dos dados aqui
+
+      alert("Seus dados foram alterados com sucesso.");
+    });
+
+    // Função para exibir mensagem ao clicar com o botão direito do mouse
+    function exibirMensagemBotaoDireito(event) {
+      event.preventDefault(); // Evita o menu de contexto padrão do navegador
+      alert("Você não deveria ser tão invasivo.");
+    }
+
+    // Adiciona evento de clique com o botão direito do mouse
+    document.addEventListener("contextmenu", exibirMensagemBotaoDireito); 
+    
+  </script>
+</body>
+</html>

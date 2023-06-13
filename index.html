@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Casa Confort</title>
+</head>
+
+<body>
+  <div class="intro">
+    <div class="section">
+      <div class="intro-titulo">
+        <h1>Casa Confort</h1>
+        <p>Casas & Apartamentos</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="section">
+      <ul>
+        <li class="teste"><a href="#maisPopular">Mais Populares</a></li>
+        <li><a href="#detalhes">Detalhes</a></li>
+        <li><a href="#vantagens">Vantagens</a></li>
+        <li><a href="#info">Informações</a></li>
+        <li><a href="area-do-cliente.html">Área do Cliente</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="maisPopular" class="maisPopular">
+    <div class="section">
+      <div class="main-img">
+        <img src="img/confortable.jpg" alt="sala de estar">
+      </div>
+      <div class="maisPopularText">
+        <p>Mais Populares</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="detalhes" class="detalhes">
+    <div class="section">
+      <div class="redondo">
+        <img src="img/cama de casal.jpg" alt="">
+        <p>Cama Box</p>
+        <div class="detalhes-botao"><button><a href="cama-box.html">Saiba mais</a></button></div>
+
+      </div>
+      <div class="redondo">
+        <img src="img/sala.jpeg" alt="">
+        <p>Cadeiras e Decorações</p>
+        <div class="detalhes-botao"><button><a href="cadeiras-decoracoes.html">Saiba mais</a></button></div>
+
+      </div>
+      <div class="redondo">
+        <img src="img/escritorio.jpg" alt="">
+        <p>Mesa de Escritório</p>
+        <div class="detalhes-botao"><button><a href="mesa-de-escritorio.html">Saiba mais</a></button></div>
+
+      </div>
+      <div class="redondo">
+        <img src="img/cadeira do papai.jpeg" alt="">
+        <p>Cadeira do Papai</p>
+        <div class="detalhes-botao"><button><a href="cadeira-do-papai.html">Saiba mais</a></button></div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="vantagens" class="vantagens">
+    <div class="section">
+      <div class="vantagens-grid">
+
+        <div class="vatagens-divs">
+          <div class="vantagens-titulo">
+            <img src="./img/icons8-relógio-de-bolso-60.png" alt="">
+            <h2>Salve seu tempo e dinheiro conosco</h2>
+          </div>
+          <div class="vantagens-p">
+            <p>Somos uma empresa que preza pelo melhor atendimento do cliente, fornecendo vários descontos imperdíveis.
+            </p>
+          </div>
+        </div>
+        
+        <div class="vatagens-divs">
+          <div class="vantagens-titulo">
+            <img src="./img/icons8-globo-terrestre-60.png" alt="">
+            <h2>Lojas mobiliadas nas principais cidades</h2>
+          </div>
+          <div class="vantagens-p">
+            <p>Temos lojas físicas com todos os pordutos em amostra para nossos clientes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="info" class="outros">
+    <div class="section">
+      <div class="outros-grid">
+        <div class="outros-detalhes">
+          <h1>Outras Vantagens</h1>
+          <div class="letra-flex">
+            <div class="letra">
+              <div class="cinza">
+                <h1>A</h1>
+              </div>
+              <div class="teste">
+                <p>Indicamos para apartamentos mobiliados</p>
+              </div>
+              <div class="outro-botao"><button>Detalhes</button></div>
+            </div>
+            <div class="letra">
+              <div class="cinza">
+                <h1>B</h1>
+              </div>
+              <div class="teste">
+                <p>Designers disponíveis para ir na sua residência</p>
+              </div>
+              <div class="outro-botao"><button>Detalhes</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="outros-info">
+          <h1>Informações Uteis</h1>
+          <ul>
+            <li><p>Moveis de todos os tipos</p></li>
+            <li><p>Temos todos os exemplares nas lojas</p></li>
+            <li><p>Fazemos entrega para toda a região metropolitana</p></li>
+            <li><p>Temos lojas espalhadas por todo o Recife</p></li>
+            <li><p>Avaliamos a avaliação de cada cliente</p></li>
+            <li><p>Aceitamos toda forma de pagamento</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer" class="footer">
+    <div class="section">
+      <div>
+        <h2>Casa Confort</h2>
+        <p>Copyright @ 2023</p>
+        <div class="linha"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Função para exibir mensagem ao clicar com o botão direito do mouse
+    function exibirMensagemBotaoDireito(event) {
+      event.preventDefault(); // Evita o menu de contexto padrão do navegador
+      alert("Você não deveria ser tão invasivo.");
+    }
+
+    // Adiciona evento de clique com o botão direito do mouse
+    document.addEventListener("contextmenu", exibirMensagemBotaoDireito); 
+  </script>
+</body>
+
+</html>

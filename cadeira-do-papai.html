@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Casa Confort</title>
+</head>
+
+<body>
+  <div class="intro">
+    <div class="section">
+      <div class="intro-titulo">
+        <h1>Casa Confort</h1>
+        <p>Casas & Apartamentos</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="section">
+      <ul>
+        <li class="teste"><a href="index.html">Página Inicial</a></li>
+        <li><a href="area-do-cliente.html">Área do Cliente</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="maisPopular" class="maisPopular">
+    <div class="section">
+      <div class="main-img">
+        <img src="img/cadeira do papai.jpeg" alt="sala de estar">
+      </div>
+      <div class="maisPopularText">
+        <p>Cadeira do Papai</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="itens-novos" class="section">
+    <div class="itens">
+      <h2>Item 1</h2>
+      <img src="" alt="">
+      <p>Descrição do Item 1.</p>
+      <p>Preço: R$X.XXX</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="itens">
+      <h2>Item 2</h2>
+      <img src="" alt="">
+      <p>Descrição do Item 2.</p>
+      <p>Preço: R$X.XXX</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="itens">
+      <h2>Item 3</h2>
+      <img src="" alt="">
+      <p>Descrição do Item 3.</p>
+      <p>Preço: R$X.XXX</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="itens">
+      <h2>Item 4</h2>
+      <img src="" alt="">
+      <p>Descrição do Item 4.</p>
+      <p>Preço: R$X.XXX</p>
+      <button>Comprar</button>
+    </div>
+  </div>
+
+  <hr class="section">
+
+  <div id="agradecimento" class="section">
+    <h3>Agradecimento</h3>
+    <p>Agradecemos imensamente pela sua preferência!</p>
+    <p>Na Casa Confort, valorizamos cada cliente e estamos felizes por você ter escolhido os nossos produtos e serviços. A sua satisfação é a nossa prioridade.</p>
+    <p>Estamos empenhados em oferecer a melhor experiência possível, desde a qualidade dos nossos produtos até o atendimento personalizado. A sua confiança é fundamental para o nosso sucesso.</p>
+    <p>Se surgir qualquer dúvida ou se precisar de assistência adicional, nossa equipe estará sempre à disposição para ajudar. Conte conosco para tornar a sua casa ainda mais confortável e acolhedora.</p>
+    <p>Mais uma vez, agradecemos pela sua preferência e pela oportunidade de servi-lo. Esperamos continuar a superar as suas expectativas e proporcionar momentos especiais em sua casa.</p>
+    <p>Atenciosamente,</p>
+    <p>Equipe Casa Confort</p>
+  </div>
+
+  <div id="contato" class="section">
+    <h2>Entre em contato</h2>
+    <p>Estamos sempre prontos para atender suas necessidades e responder a todas as suas perguntas. Entre em contato conosco através dos seguintes meios:</p>
+    <ul>
+      <li><strong>Telefone:</strong> (XX) XXXX-XXXX</li>
+      <li><strong>Email:</strong> info@casaconfort.com</li>
+      <li><strong>Endereço:</strong> Rua Exemplo, 1234, Cidade, Estado</li>
+    </ul>
+    <p>Se preferir, você também pode nos enviar uma mensagem preenchendo o formulário abaixo:</p>
+    <form id="formulario">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <div id="footer" class="footer">
+    <div class="section">
+      <div>
+        <h2>Casa Confort</h2>
+        <p>Copyright @ 2023</p>
+        <div class="linha"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Função para exibir mensagem de sucesso após enviar o formulário
+    function exibirMensagem() {
+      var formulario = document.getElementById("formulario");
+      formulario.style.display = "none"; // Esconde o formulário
+
+      var mensagemSucesso = document.createElement("p");
+      mensagemSucesso.textContent = "Obrigado por entrar em contato! Recebemos sua mensagem.";
+      mensagemSucesso.style.color = "green";
+
+      var contatoDiv = document.getElementById("contato");
+      contatoDiv.appendChild(mensagemSucesso);
+    }
+
+    // Função para exibir mensagem ao clicar no botão "Comprar"
+    function exibirMensagemCompra() {
+      alert("A página de compra não foi desenvolvida até o presente momento.");
+    }
+
+    // Função para exibir mensagem ao clicar com o botão direito do mouse
+    function exibirMensagemBotaoDireito(event) {
+      event.preventDefault(); // Evita o menu de contexto padrão do navegador
+      alert("Você não deveria ser tão invasivo.");
+    }
+
+    // Event listener para o envio do formulário
+    var formulario = document.getElementById("formulario");
+    formulario.addEventListener("submit", function (event) {
+      event.preventDefault(); // Evita o envio padrão do formulário
+      exibirMensagem(); // Chama a função para exibir a mensagem de sucesso
+    });
+
+    // Adiciona evento de clique aos botões de "Comprar"
+    var botoesCompra = document.querySelectorAll(".itens button");
+    botoesCompra.forEach(function (botao) {
+      botao.addEventListener("click", exibirMensagemCompra);
+    });
+
+    // Adiciona evento de clique com o botão direito do mouse
+    document.addEventListener("contextmenu", exibirMensagemBotaoDireito);
+  </script>
+  
+</body>
+
+</html>
